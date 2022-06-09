@@ -28,46 +28,46 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
+	display: block;
 }
 
 body {
-  line-height: 1;
+	line-height: 1;
 }
 
 ol, ul {
-  list-style: none;
+	list-style: none;
 }
 
 blockquote, q {
-  quotes: none;
+	quotes: none;
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
-  content: none;
+	content: "";
+	content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* 1. Main Layout ================================= */
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /*
@@ -76,75 +76,58 @@ table {
 * 
 */
 body {
-  background-color: #f5f0d8;
-  min-height: 100vh;
-  padding: 5vh 5vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #eee;
-  font-family: sans-serif;
+	min-height: 100vh;
+	padding: 5vh 5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #eee;
+	font-family: sans-serif;
 }
-body .poster {
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-  /*
-  	Everything in % so it's fully responsive!!!!!
-  */
+
+.poster {
+	position: relative;
+	overflow: hidden;
+	background-color: #d8d2c5;
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+	background-image: url(../img/jazz-poster-guide-layer.png);
+	background-size: contain;
 }
-@media (min-aspect-ratio: 536/750) {
-  body .poster {
-    width: 64.32vh;
-    height: 90vh;
-  }
+@media (min-aspect-ratio: 976/1400) {
+	.poster {
+		width: 62.7428571429vh;
+		height: 90vh;
+	}
 }
-@media (max-aspect-ratio: 536/750) {
-  body .poster {
-    width: 90vw;
-    height: 125.9328358209vw;
-  }
+@media (max-aspect-ratio: 976/1400) {
+	.poster {
+		width: 90vw;
+		height: 129.0983606557vw;
+	}
 }
-body .poster .full-size {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 100%;
+.poster .head-and-sax {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 25%;
+	top: 4.25%;
+	transition: 2s;
+	-webkit-transform-origin: 15.5% 17.5%;
+	        transform-origin: 15.5% 17.5%;
+	-webkit-transform: rotate(0deg);
+	        transform: rotate(0deg);
 }
-body .poster .shuttle {
-  height: 100px;
-  width: 100px;
-  -webkit-transform: translateY(15%);
-          transform: translateY(15%);
+.poster .head-and-sax .head {
+	width: 22.5%;
 }
-body .poster .sun {
-  background-color: #f07b23;
-  height: 300px;
-  width: 300px;
-  border-radius: 100%;
-}
-body .poster .lb-streak {
-  height: 300px;
-  width: 300px;
-}
-body .poster .lc-streak {
-  height: 300px;
-  width: 300px;
-}
-body .poster .lo-streak {
-  height: 300px;
-  width: 300px;
-}
-body .poster .rb-streak {
-  height: 300px;
-  width: 300px;
-}
-body .poster .rc-streak {
-  height: 300px;
-  width: 300px;
-}
-body .poster .ro-streak {
-  height: 300px;
-  width: 300px;
+.poster .head-and-sax .flute {
+	background-color: black;
+	width: 20%;
+	height: 1%;
+	position: absolute;
+	left: 23%;
+	top: 13%;
+	-webkit-transform: rotate(-2deg);
+	        transform: rotate(-2deg);
 }
 /*# sourceMappingURL=main.css.map */

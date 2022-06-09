@@ -11,7 +11,7 @@ TABLE OF CONTENTS:
 
 ==============================================
 */
-
+@use 'sass:math';
 @import 'reset';
 
 /* 1. Main Layout ================================= */
@@ -25,13 +25,59 @@ TABLE OF CONTENTS:
 * MEASURE YOUR POSTER and change these two variables !
 * 
 */
-$poster-width: 536;
-$poster-height: 750;
-
-
+$poster-width: 976;
+$poster-height: 1400;
 
 body {
-	
-
+	min-height: 100vh;
+	padding: 5vh 5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #eee;
+	font-family: sans-serif;
 }
+.poster {
+	position: relative;
 
+	overflow: hidden;
+
+	background-color: #d8d2c5;
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+
+	@media (min-aspect-ratio: #{$poster-width} / #{$poster-height}) {
+		width: 90vh * math.div($poster-width, $poster-height);
+		height: 90vh;
+	}
+
+	@media (max-aspect-ratio: #{$poster-width} / #{$poster-height}) {
+		width: 90vw;
+		height: 90vw * math.div($poster-height, $poster-width);
+	}
+
+	background-image: url(../img/jazz-poster-guide-layer.png);
+	background-size: contain;
+
+	.head-and-sax {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 25%;
+		top: 4.25%;
+		transition: 2s;
+		transform-origin: 15.5% 17.5%;
+		transform: rotate(0deg);
+		.head {
+			width: 22.5%;
+		}
+		.flute {
+			background-color: black;
+			width: 20%;
+			height: 1%;
+			position: absolute;
+			left: 23%;
+			top: 13%;
+			transform: rotate(-2deg);
+		}
+	}
+}
