@@ -1,0 +1,150 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+  box-sizing: border-box;
+}
+
+/*
+*
+* MEASURE YOUR POSTER and change these two variables !
+* 
+*/
+body {
+  background-color: #f5f0d8;
+  min-height: 100vh;
+  padding: 5vh 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  font-family: sans-serif;
+}
+body .poster {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  /*
+  	Everything in % so it's fully responsive!!!!!
+  */
+}
+@media (min-aspect-ratio: 536/750) {
+  body .poster {
+    width: 64.32vh;
+    height: 90vh;
+  }
+}
+@media (max-aspect-ratio: 536/750) {
+  body .poster {
+    width: 90vw;
+    height: 125.9328358209vw;
+  }
+}
+body .poster .full-size {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+}
+body .poster .shuttle {
+  height: 100px;
+  width: 100px;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+}
+body .poster .sun {
+  background-color: #f07b23;
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+}
+body .poster .lb-streak {
+  height: 300px;
+  width: 300px;
+}
+body .poster .lc-streak {
+  height: 300px;
+  width: 300px;
+}
+body .poster .lo-streak {
+  height: 300px;
+  width: 300px;
+}
+body .poster .rb-streak {
+  height: 300px;
+  width: 300px;
+}
+body .poster .rc-streak {
+  height: 300px;
+  width: 300px;
+}
+body .poster .ro-streak {
+  height: 300px;
+  width: 300px;
+}
+/*# sourceMappingURL=main.css.map */
